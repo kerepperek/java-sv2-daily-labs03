@@ -5,14 +5,14 @@ import java.util.stream.IntStream;
 public class Mathematics {
 
     public boolean isPrime(int number){
-        for(int i=2;i<=Math.sqrt(number);i++){
-            if(number%i==0){
-                return false;
+        if(Math.abs(number)<=4) {return false;}
+            for (int i = 3; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                }
             }
 
-        }
         return true;
-
       //  return number > 1
       //          && IntStream.rangeClosed(2, (int) Math.sqrt(number))
       //         .noneMatch(n -> (number % n == 0));

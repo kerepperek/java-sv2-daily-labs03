@@ -4,12 +4,12 @@ import java.util.Arrays;
 
 public class Prison {
 
-    private boolean[] doors = new boolean[100];
+    private boolean[] cells = new boolean[100];
 
     public boolean[] openFreeCells() {
-        for (int counter = 1; counter <= 100; counter++)
-            for (int subcounter = counter - 1; subcounter < 100; subcounter += counter)
-                doors[subcounter] ^= true;
-        return doors;
+        for (int counter = 1; counter <=cells.length ; counter++)
+            for (int subcounter = counter - 1; subcounter < cells.length; subcounter += counter)
+                cells[subcounter] ^= true;
+        return cells;
     }
 }

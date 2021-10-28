@@ -6,6 +6,7 @@ public class Sultan {
 
     public static void main(String[] args) {
         Prison prison = new Prison();
-        System.out.println(Arrays.toString(prison.openFreeCells()));
+        prison.openFreeCells();
+        System.out.println(Arrays.toString(prison.getCells()));
     }
 }
